@@ -63,7 +63,7 @@ export function JobsSection() {
             </div>
           </div>
         </div>
-        
+
         <JobCard
           {...jobsUnlockedData}
           onApply={() => console.log('Apply to', jobsUnlockedData.company)}

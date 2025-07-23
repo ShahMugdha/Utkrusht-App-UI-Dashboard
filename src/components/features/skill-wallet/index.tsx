@@ -34,7 +34,6 @@ export function SkillWallet() {
         <div className="relative w-full max-w-[480px] mx-auto">
           <div className="relative rounded-[24px_0px_0px_24px] overflow-hidden shadow-[0px_4px_4px_#00000040]">
             <div className="w-full h-[940px] rounded-[24px_0px_0px_24px] bg-gradient-to-br from-green-900 to-green-700 overflow-hidden">
-              
               {/* Notification Card */}
               <div className="pt-[94px] px-4">
                 <NotificationCard />
@@ -56,7 +55,9 @@ export function SkillWallet() {
                     isMainCard
                     expiryDate="05 December 2025"
                     certificateViews={28}
-                    onShareClick={() => console.log('Share Node.js certificate')}
+                    onShareClick={() =>
+                      console.log('Share Node.js certificate')
+                    }
                   />
 
                   {/* Docker skill card */}
@@ -70,10 +71,7 @@ export function SkillWallet() {
 
                   {/* MongoDB skill cards */}
                   {mongoDbSkills.map((skill) => (
-                    <MongoDBSkillCard
-                      key={skill.id}
-                      skill={skill}
-                    />
+                    <MongoDBSkillCard key={skill.id} skill={skill} />
                   ))}
                 </div>
               </div>

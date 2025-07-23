@@ -67,17 +67,23 @@ export function JobCard({
   ];
 
   return (
-    <Card className={cn(
-      'w-full max-w-[900px] h-[180px] relative border border-solid border-primary/20 rounded-2xl overflow-hidden',
-      className
-    )}>
+    <Card
+      className={cn(
+        'w-full max-w-[900px] h-[180px] relative border border-solid border-primary/20 rounded-2xl overflow-hidden',
+        className
+      )}
+    >
       {/* Top badges */}
       {(isAspirational || isPayLevelUp) && (
         <div className="inline-flex items-center justify-center gap-1 pl-4 pr-6 py-0.5 absolute top-0 right-0 bg-sky-900 rounded-[0px_0px_0px_8px]">
           <img
             className="w-3.5 h-[9px]"
             alt="Badge icon"
-            src={isPayLevelUp ? "/figmaAssets/vector-12.svg" : "/figmaAssets/vector-19.svg"}
+            src={
+              isPayLevelUp
+                ? '/figmaAssets/vector-12.svg'
+                : '/figmaAssets/vector-19.svg'
+            }
           />
           <span className="font-normal text-white text-[10px] leading-[18px] whitespace-nowrap">
             {isPayLevelUp ? 'Pay level up' : 'Aspirational title'}
@@ -110,7 +116,7 @@ export function JobCard({
             <h3 className="font-medium text-black text-base leading-normal mb-1">
               {company}
             </h3>
-            
+
             {title && (
               <h4 className="font-semibold text-lg text-primary mb-2">
                 {title}
@@ -120,7 +126,9 @@ export function JobCard({
             <div className="flex items-center gap-5 mb-3">
               {jobDetails.map((detail, index) => (
                 <div key={index} className="flex items-center gap-1">
-                  <div className="relative w-4 h-4 text-stone-500">{detail.icon}</div>
+                  <div className="relative w-4 h-4 text-stone-500">
+                    {detail.icon}
+                  </div>
                   <span className="font-normal text-stone-500 text-xs leading-[18px] whitespace-nowrap">
                     {detail.text}
                   </span>
@@ -139,9 +147,11 @@ export function JobCard({
               {skills.map((skill, index) => (
                 <Badge
                   key={index}
-                  variant={skill.highlighted ? "default" : "secondary"}
+                  variant={skill.highlighted ? 'default' : 'secondary'}
                   className={cn(
-                    skill.highlighted ? "bg-primary text-primary-foreground" : "bg-gray-100 text-gray-700"
+                    skill.highlighted
+                      ? 'bg-primary text-primary-foreground'
+                      : 'bg-gray-100 text-gray-700'
                   )}
                 >
                   {skill.name}
@@ -154,18 +164,17 @@ export function JobCard({
           <div className="flex flex-col items-end justify-between">
             {salary && (
               <div className="text-right">
-                <div className="font-bold text-lg text-primary">
-                  {salary}
-                </div>
+                <div className="font-bold text-lg text-primary">{salary}</div>
                 {negotiable && (
-                  <div className="text-xs text-stone-500">
-                    {negotiable}
-                  </div>
+                  <div className="text-xs text-stone-500">{negotiable}</div>
                 )}
               </div>
             )}
 
-            <Button onClick={onApply} className="bg-primary hover:bg-primary/90">
+            <Button
+              onClick={onApply}
+              className="bg-primary hover:bg-primary/90"
+            >
               Apply now
             </Button>
           </div>

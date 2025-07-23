@@ -23,10 +23,12 @@ export function Dashboard() {
     <div className="bg-gray-50 flex flex-row w-full min-h-screen">
       <div className="flex w-full max-w-[1440px] mx-auto">
         {/* Main Content Area */}
-        <div className={cn(
-          'flex-1 transition-all duration-300',
-          isSidebarCollapsed ? 'mr-16' : 'mr-[492px]'
-        )}>
+        <div
+          className={cn(
+            'flex-1 transition-all duration-300',
+            isSidebarCollapsed ? 'mr-16' : 'mr-[492px]'
+          )}
+        >
           <div className="relative w-full">
             {/* Header with user profile and notifications - only show when sidebar is expanded */}
             {!isSidebarCollapsed && (
@@ -35,7 +37,9 @@ export function Dashboard() {
                   notificationCount={4}
                   userImage="/figmaAssets/mask-group.png"
                   onSearchClick={() => console.log('Search clicked')}
-                  onNotificationClick={() => console.log('Notifications clicked')}
+                  onNotificationClick={() =>
+                    console.log('Notifications clicked')
+                  }
                   onProfileClick={() => console.log('Profile clicked')}
                 />
               </div>

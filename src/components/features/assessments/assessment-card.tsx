@@ -11,11 +11,11 @@ interface AssessmentCardProps {
   onTakeAssessment?: () => void;
 }
 
-export function AssessmentCard({ 
-  title, 
-  image, 
-  difficulty, 
-  onTakeAssessment 
+export function AssessmentCard({
+  title,
+  image,
+  difficulty,
+  onTakeAssessment,
 }: AssessmentCardProps) {
   return (
     <Card className="w-[300px] h-[272px] overflow-hidden rounded-lg shadow-md">
@@ -26,7 +26,7 @@ export function AssessmentCard({
             alt={`${title} assessment`}
             src={image}
           />
-          <Badge 
+          <Badge
             className="absolute top-2 right-2 bg-primary text-primary-foreground"
             variant="default"
           >
@@ -35,11 +35,7 @@ export function AssessmentCard({
         </div>
         <div className="p-4">
           <h3 className="font-semibold text-lg mb-2">{title}</h3>
-          <Button 
-            onClick={onTakeAssessment}
-            className="w-full"
-            size="sm"
-          >
+          <Button onClick={onTakeAssessment} className="w-full" size="sm">
             Take Assessment
           </Button>
         </div>

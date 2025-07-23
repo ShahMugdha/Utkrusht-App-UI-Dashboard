@@ -15,11 +15,13 @@ export function Sidebar({ className }: SidebarProps) {
   const [isCollapsed, setIsCollapsed] = useState(false);
 
   return (
-    <div className={cn(
-      'fixed right-0 top-0 h-full transition-all duration-300 z-20',
-      isCollapsed ? 'w-16' : 'w-[492px]',
-      className
-    )}>
+    <div
+      className={cn(
+        'fixed right-0 top-0 h-full transition-all duration-300 z-20',
+        isCollapsed ? 'w-16' : 'w-[492px]',
+        className
+      )}
+    >
       {/* Toggle Button */}
       <Button
         onClick={() => setIsCollapsed(!isCollapsed)}
@@ -34,19 +36,21 @@ export function Sidebar({ className }: SidebarProps) {
       </Button>
 
       {/* Sidebar Content */}
-      <div className={cn(
-        'h-full transition-opacity duration-300',
-        isCollapsed ? 'opacity-0 pointer-events-none' : 'opacity-100'
-      )}>
+      <div
+        className={cn(
+          'h-full transition-opacity duration-300',
+          isCollapsed ? 'opacity-0 pointer-events-none' : 'opacity-100'
+        )}
+      >
         <SkillWallet />
       </div>
-      
+
       {/* Collapsed state - slim green bar with header icons */}
       {isCollapsed && (
         <div className="h-full w-16 bg-gradient-to-b from-green-900 to-green-700 flex flex-col items-center justify-start pt-6">
           {/* Header icons arranged vertically */}
           <div className="flex flex-col items-center gap-4 mb-8">
-            <HeaderActions 
+            <HeaderActions
               className="flex-col gap-4"
               onSearchClick={() => console.log('Search clicked')}
               onNotificationClick={() => console.log('Notifications clicked')}
@@ -74,7 +78,7 @@ export function Sidebar({ className }: SidebarProps) {
 
 export function useSidebar() {
   const [isCollapsed, setIsCollapsed] = useState(false);
-  
+
   return {
     isCollapsed,
     setIsCollapsed,

@@ -18,13 +18,13 @@ export function AssessmentSection({ paginationDots }: AssessmentSectionProps) {
       difficulty: 'Intermediate',
     },
     {
-      title: 'React Assessment', 
+      title: 'React Assessment',
       image: '/figmaAssets/assessment-1.png',
       difficulty: 'Advanced',
     },
     {
       title: 'MongoDB Assessment',
-      image: '/figmaAssets/assessment-2.png', 
+      image: '/figmaAssets/assessment-2.png',
       difficulty: 'Beginner',
     },
   ];
@@ -64,7 +64,9 @@ export function AssessmentSection({ paginationDots }: AssessmentSectionProps) {
           <div
             key={`dot-${index}`}
             className={`w-2.5 h-2.5 rounded-full cursor-pointer transition-colors ${
-              dot.active ? 'bg-[#4b4b4b]' : 'bg-[#4b4b4b33] hover:bg-[#4b4b4b66]'
+              dot.active
+                ? 'bg-[#4b4b4b]'
+                : 'bg-[#4b4b4b33] hover:bg-[#4b4b4b66]'
             }`}
           />
         ))}

@@ -62,9 +62,7 @@ export function Navigation({ className }: NavigationProps) {
 
   return (
     <nav className={cn('flex items-center h-full', className)}>
-      <div
-        className="font-bold text-xl text-primary tracking-[0] leading-normal whitespace-nowrap mr-10 font-playfair"
-      >
+      <div className="font-bold text-xl text-primary tracking-[0] leading-normal whitespace-nowrap mr-10 font-playfair">
         Utkrusht
       </div>
 
@@ -84,8 +82,8 @@ export function Navigation({ className }: NavigationProps) {
             <div
               className={cn(
                 'text-base leading-[22.4px] whitespace-nowrap',
-                item.isActive 
-                  ? 'font-bold text-primary-foreground' 
+                item.isActive
+                  ? 'font-bold text-primary-foreground'
                   : 'font-semibold text-primary'
               )}
             >

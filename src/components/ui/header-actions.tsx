@@ -48,7 +48,9 @@ export function HeaderActions({
 
             {notificationCount > 0 && (
               <Badge className="absolute w-4 h-4 top-0 left-2.5 bg-amber-400 text-amber-950 border-amber-500 rounded-lg px-0 py-0 flex items-center justify-center">
-                <span className="text-xs font-semibold">{notificationCount}</span>
+                <span className="text-xs font-semibold">
+                  {notificationCount}
+                </span>
               </Badge>
             )}
           </div>

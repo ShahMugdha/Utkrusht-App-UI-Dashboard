@@ -30,9 +30,7 @@ export function NotificationCard() {
 
           <p className="text-base text-center">
             <span className="text-white">Complete </span>
-            <span className="font-medium text-[#8beab7]">
-              Python Advance
-            </span>
+            <span className="font-medium text-[#8beab7]">Python Advance</span>
             <span className="text-white">
               {' '}
               assessment to unlock a new certificate

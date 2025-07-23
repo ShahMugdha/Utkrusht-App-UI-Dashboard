@@ -47,11 +47,7 @@ export function SkillCard({
         <CardContent className="p-0">
           <div className="flex w-[364px] items-center justify-between h-full py-8 mx-auto">
             <div className="flex items-center gap-2">
-              <img
-                className="w-8 h-8"
-                alt={name}
-                src={icon}
-              />
+              <img className="w-8 h-8" alt={name} src={icon} />
               <div className="flex items-baseline gap-2">
                 <span className="font-normal text-primary-foreground text-lg">
                   {name}
@@ -73,10 +69,12 @@ export function SkillCard({
   }
 
   return (
-    <Card className={cn(
-      'w-full rounded-2xl bg-white shadow-[0px_4px_4px_#00000040] overflow-hidden',
-      isMainCard ? 'h-[308px]' : 'h-[84px]'
-    )}>
+    <Card
+      className={cn(
+        'w-full rounded-2xl bg-white shadow-[0px_4px_4px_#00000040] overflow-hidden',
+        isMainCard ? 'h-[308px]' : 'h-[84px]'
+      )}
+    >
       <CardContent className="p-0">
         {/* Header section */}
         <div className="flex w-[374px] items-center justify-between p-2.5 mx-auto">
@@ -95,13 +93,9 @@ export function SkillCard({
 
             <div className="flex flex-col items-start justify-between self-stretch">
               <div className="flex items-baseline gap-2">
-                <h4 className="font-bold text-[#000000cc] text-lg">
-                  {name}
-                </h4>
+                <h4 className="font-bold text-[#000000cc] text-lg">{name}</h4>
                 <Badge className="px-1 py-0 bg-[#8beab74c] text-primary rounded-[99px]">
-                  <span className="text-[10px] font-normal">
-                    {level}
-                  </span>
+                  <span className="text-[10px] font-normal">{level}</span>
                 </Badge>
               </div>
 
@@ -164,16 +158,16 @@ export function SkillCard({
                         className={cn(
                           item.width,
                           'rounded-[99px]',
-                          item.active 
-                            ? 'h-2 bg-primary' 
+                          item.active
+                            ? 'h-2 bg-primary'
                             : `h-1 ${index < 3 ? 'bg-[#29be70]' : 'bg-[#ecebea]'}`
                         )}
                       />
                       <span
                         className={cn(
                           'text-[10px] text-center',
-                          item.active 
-                            ? 'font-bold text-black' 
+                          item.active
+                            ? 'font-bold text-black'
                             : 'font-normal text-[#44403c66]'
                         )}
                       >
@@ -220,9 +214,7 @@ export function SkillCard({
                   alt="Share"
                   src="/figmaAssets/vector-9.svg"
                 />
-                <span className="font-semibold text-xs">
-                  Share Certificate
-                </span>
+                <span className="font-semibold text-xs">Share Certificate</span>
               </Button>
             </div>
           </>
