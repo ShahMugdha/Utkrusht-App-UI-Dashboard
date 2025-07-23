@@ -131,13 +131,13 @@ export const Dashboard = (): JSX.Element => {
           {/* Toggle Button */}
           <Button
             onClick={() => setIsSidebarCollapsed(!isSidebarCollapsed)}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 z-30 w-8 h-8 rounded-full bg-white border border-gray-300 shadow-lg hover:bg-gray-50 p-0"
+            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 z-30 w-8 h-8 rounded-full bg-[#1b6740] hover:bg-[#155933] border-0 shadow-lg p-0"
             variant="outline"
           >
             {isSidebarCollapsed ? (
-              <ChevronLeftIcon className="w-4 h-4 text-gray-600" />
+              <ChevronLeftIcon className="w-4 h-4 text-white" />
             ) : (
-              <ChevronRightIcon className="w-4 h-4 text-gray-600" />
+              <ChevronRightIcon className="w-4 h-4 text-white" />
             )}
           </Button>
 
@@ -148,11 +148,20 @@ export const Dashboard = (): JSX.Element => {
             <SkillWalletSection />
           </div>
           
-          {/* Collapsed state indicator */}
+          {/* Collapsed state - slim green bar */}
           {isSidebarCollapsed && (
-            <div className="h-full w-16 bg-gradient-to-b from-green-900 to-green-700 flex items-center justify-center">
-              <div className="text-white transform -rotate-90 whitespace-nowrap text-sm font-medium">
-                Skill Wallet
+            <div className="h-full w-16 bg-[linear-gradient(135deg,rgba(7,45,25,1)_0%,rgba(14,75,43,1)_100%)] flex flex-col items-center justify-start pt-32">
+              {/* Small circular icon indicators */}
+              <div className="flex flex-col items-center gap-6">
+                <div className="w-8 h-8 rounded-full bg-white bg-opacity-20 flex items-center justify-center">
+                  <div className="w-4 h-4 rounded-full bg-white"></div>
+                </div>
+                <div className="w-8 h-8 rounded-full bg-white bg-opacity-20 flex items-center justify-center">
+                  <div className="w-3 h-3 bg-amber-400 rounded-sm"></div>
+                </div>
+                <div className="w-8 h-8 rounded-full bg-white bg-opacity-20 flex items-center justify-center">
+                  <div className="w-3 h-3 bg-white rounded-sm"></div>
+                </div>
               </div>
             </div>
           )}
