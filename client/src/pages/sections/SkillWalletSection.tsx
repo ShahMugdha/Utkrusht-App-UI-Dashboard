@@ -32,7 +32,7 @@ export const SkillWalletSection = (): JSX.Element => {
           <div className="relative rounded-[24px_0px_0px_24px] overflow-hidden shadow-[0px_4px_4px_#00000040] h-full">
             <div className="w-full h-full rounded-[24px_0px_0px_24px] bg-[linear-gradient(135deg,rgba(7,45,25,1)_0%,rgba(14,75,43,1)_100%)] overflow-y-auto">
               {/* Top notification section */}
-              <div className="flex flex-col w-[274px] items-center justify-center gap-3 relative top-6 mx-auto">
+              <div className="flex flex-col w-[274px] items-center justify-center gap-3 relative top-16 mx-auto">
                 <div className="flex flex-col items-center justify-center gap-2 relative self-stretch w-full">
                   <h2 className="font-bold text-white text-xl font-['Inter',Helvetica]">
                     You&apos;re almost there!
