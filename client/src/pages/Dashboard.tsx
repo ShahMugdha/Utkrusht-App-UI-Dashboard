@@ -25,34 +25,36 @@ export const Dashboard = (): JSX.Element => {
         {/* Main Content Area */}
         <div className={`flex-1 transition-all duration-300 ${isSidebarCollapsed ? 'mr-16' : 'mr-[492px]'}`}>
           <div className="relative w-full">
-            {/* Header with user profile and notifications */}
-            <div className="flex items-center justify-end gap-8 absolute top-6 right-8 z-10">
-              <div className="relative w-6 h-6">
-                <SearchIcon className="w-5 h-5" />
-              </div>
+            {/* Header with user profile and notifications - only show when sidebar is expanded */}
+            {!isSidebarCollapsed && (
+              <div className="flex items-center justify-end gap-8 absolute top-6 right-8 z-10">
+                <div className="relative w-6 h-6">
+                  <SearchIcon className="w-5 h-5" />
+                </div>
 
-              <div className="inline-flex items-center gap-2 px-2 py-1.5 relative">
-                <div className="relative w-[26px] h-[30px]">
-                  <div className="relative w-7 h-[30px]">
-                    <div className="absolute w-6 h-6 top-1.5 left-0">
-                      <BellIcon className="w-[18px] h-[19px] absolute top-0.5 left-[3px]" />
+                <div className="inline-flex items-center gap-2 px-2 py-1.5 relative">
+                  <div className="relative w-[26px] h-[30px]">
+                    <div className="relative w-7 h-[30px]">
+                      <div className="absolute w-6 h-6 top-1.5 left-0">
+                        <BellIcon className="w-[18px] h-[19px] absolute top-0.5 left-[3px]" />
+                      </div>
+
+                      <Badge className="absolute w-4 h-4 top-0 left-2.5 bg-amber-400 text-amber-950 border-amber-500 rounded-lg px-0 py-0 flex items-center justify-center">
+                        <span className="text-xs font-semibold">4</span>
+                      </Badge>
                     </div>
-
-                    <Badge className="absolute w-4 h-4 top-0 left-2.5 bg-amber-400 text-amber-950 border-amber-500 rounded-lg px-0 py-0 flex items-center justify-center">
-                      <span className="text-xs font-semibold">4</span>
-                    </Badge>
                   </div>
                 </div>
-              </div>
 
-              <Avatar>
-                <img
-                  className="h-full w-full object-cover"
-                  alt="User profile"
-                  src="/figmaAssets/mask-group.png"
-                />
-              </Avatar>
-            </div>
+                <Avatar>
+                  <img
+                    className="h-full w-full object-cover"
+                    alt="User profile"
+                    src="/figmaAssets/mask-group.png"
+                  />
+                </Avatar>
+              </div>
+            )}
 
             {/* Main content sections */}
             <section className="mt-10 mb-8">
@@ -148,19 +150,44 @@ export const Dashboard = (): JSX.Element => {
             <SkillWalletSection />
           </div>
           
-          {/* Collapsed state - slim green bar */}
+          {/* Collapsed state - slim green bar with header icons */}
           {isSidebarCollapsed && (
-            <div className="h-full w-16 bg-[linear-gradient(135deg,rgba(7,45,25,1)_0%,rgba(14,75,43,1)_100%)] flex flex-col items-center justify-start pt-32">
-              {/* Small circular icon indicators */}
-              <div className="flex flex-col items-center gap-6">
-                <div className="w-8 h-8 rounded-full bg-white bg-opacity-20 flex items-center justify-center">
-                  <div className="w-4 h-4 rounded-full bg-white"></div>
+            <div className="h-full w-16 bg-[linear-gradient(135deg,rgba(7,45,25,1)_0%,rgba(14,75,43,1)_100%)] flex flex-col items-center justify-start pt-6">
+              {/* Header icons arranged vertically */}
+              <div className="flex flex-col items-center gap-4 mb-8">
+                {/* Search Icon */}
+                <div className="w-8 h-8 rounded-full bg-white bg-opacity-20 flex items-center justify-center cursor-pointer hover:bg-opacity-30 transition-all">
+                  <SearchIcon className="w-4 h-4 text-white" />
                 </div>
-                <div className="w-8 h-8 rounded-full bg-white bg-opacity-20 flex items-center justify-center">
-                  <div className="w-3 h-3 bg-amber-400 rounded-sm"></div>
+
+                {/* Notification Icon with Badge */}
+                <div className="relative w-8 h-8 rounded-full bg-white bg-opacity-20 flex items-center justify-center cursor-pointer hover:bg-opacity-30 transition-all">
+                  <BellIcon className="w-4 h-4 text-white" />
+                  <Badge className="absolute -top-1 -right-1 w-4 h-4 bg-amber-400 text-amber-950 border-0 rounded-full px-0 py-0 flex items-center justify-center">
+                    <span className="text-xs font-semibold">4</span>
+                  </Badge>
                 </div>
-                <div className="w-8 h-8 rounded-full bg-white bg-opacity-20 flex items-center justify-center">
-                  <div className="w-3 h-3 bg-white rounded-sm"></div>
+
+                {/* Profile Avatar */}
+                <div className="w-8 h-8 rounded-full overflow-hidden border-2 border-white border-opacity-30 cursor-pointer hover:border-opacity-50 transition-all">
+                  <img
+                    className="h-full w-full object-cover"
+                    alt="User profile"
+                    src="/figmaAssets/mask-group.png"
+                  />
+                </div>
+              </div>
+
+              {/* Skill wallet indicator icons */}
+              <div className="flex flex-col items-center gap-6 pt-8">
+                <div className="w-6 h-6 rounded-full bg-white bg-opacity-20 flex items-center justify-center">
+                  <div className="w-3 h-3 rounded-full bg-white"></div>
+                </div>
+                <div className="w-6 h-6 rounded-full bg-white bg-opacity-20 flex items-center justify-center">
+                  <div className="w-2 h-2 bg-amber-400 rounded-sm"></div>
+                </div>
+                <div className="w-6 h-6 rounded-full bg-white bg-opacity-20 flex items-center justify-center">
+                  <div className="w-2 h-2 bg-white rounded-sm"></div>
                 </div>
               </div>
             </div>
