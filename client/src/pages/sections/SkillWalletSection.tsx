@@ -26,15 +26,15 @@ export const SkillWalletSection = (): JSX.Element => {
   ];
 
   return (
-    <section className="relative w-full max-w-[492px] h-screen">
-      <div className="relative h-full">
-        <div className="relative w-full max-w-[480px] mx-auto h-full">
-          <div className="relative rounded-[24px_0px_0px_24px] overflow-hidden shadow-[0px_4px_4px_#00000040] h-full">
-            <div className="w-full h-full rounded-[24px_0px_0px_24px] bg-[linear-gradient(135deg,rgba(7,45,25,1)_0%,rgba(14,75,43,1)_100%)] overflow-y-auto">
+    <section className="relative w-full max-w-[492px]">
+      <div className="relative">
+        <div className="relative w-full max-w-[480px] mx-auto">
+          <div className="relative rounded-[24px_0px_0px_24px] overflow-hidden shadow-[0px_4px_4px_#00000040]">
+            <div className="w-full h-[940px] rounded-[24px_0px_0px_24px] bg-[linear-gradient(135deg,rgba(7,45,25,1)_0%,rgba(14,75,43,1)_100%)] overflow-hidden">
               {/* Top notification section */}
-              <div className="flex flex-col w-[274px] items-center justify-center gap-3 relative top-16 mx-auto">
-                <div className="flex flex-col items-center justify-center gap-2 relative self-stretch w-full">
-                  <h2 className="font-bold text-white text-xl font-['Inter',Helvetica]">
+              <div className="flex flex-col w-[274px] items-center justify-center gap-4 relative top-[94px] mx-auto">
+                <div className="flex flex-col items-center justify-center gap-3 relative self-stretch w-full">
+                  <h2 className="font-bold text-white text-2xl font-['Inter',Helvetica]">
                     You&apos;re almost there!
                   </h2>
 
@@ -71,13 +71,13 @@ export const SkillWalletSection = (): JSX.Element => {
 
                 <Button
                   variant="outline"
-                  className="w-[250px] h-8 rounded-[99px] border border-solid border-[#8beab766] bg-transparent"
+                  className="w-[275px] h-10 rounded-[99px] border border-solid border-[#8beab766] bg-transparent"
                 >
-                  <span className="font-semibold text-[#8beab7] text-xs">
+                  <span className="font-semibold text-[#8beab7] text-sm">
                     Take assessment
                   </span>
                   <img
-                    className="w-2.5 h-2 ml-2"
+                    className="w-3 h-2.5 ml-2"
                     alt="Arrow"
                     src="/figmaAssets/vector.svg"
                   />
@@ -85,14 +85,14 @@ export const SkillWalletSection = (): JSX.Element => {
               </div>
 
               {/* Skill Wallet section */}
-              <div className="flex flex-col items-center gap-3 mt-8 px-6 pb-4">
-                <h3 className="font-normal text-white text-sm font-['Inter',Helvetica]">
+              <div className="flex flex-col items-center gap-4 mt-[100px] px-10">
+                <h3 className="font-normal text-white text-base font-['Inter',Helvetica]">
                   Skill Wallet
                 </h3>
 
-                <div className="w-full max-w-[380px]">
+                <div className="w-full max-w-[400px]">
                   {/* Main certificate card */}
-                  <Card className="w-full h-[240px] mb-3 rounded-2xl bg-white shadow-[0px_4px_4px_#00000040] overflow-hidden">
+                  <Card className="w-full h-[308px] mb-4 rounded-2xl bg-white shadow-[0px_4px_4px_#00000040] overflow-hidden">
                     <CardContent className="p-0">
                       <div className="flex w-[374px] items-center justify-between p-2.5 mx-auto">
                         <div className="flex items-start gap-3">
@@ -110,11 +110,11 @@ export const SkillWalletSection = (): JSX.Element => {
 
                           <div className="flex flex-col items-start justify-between self-stretch">
                             <div className="flex items-baseline gap-2">
-                              <h4 className="font-bold text-[#000000cc] text-base font-['Inter',Helvetica]">
+                              <h4 className="font-bold text-[#000000cc] text-lg font-['Inter',Helvetica]">
                                 Node.js
                               </h4>
                               <Badge className="px-1 py-0 bg-[#8beab74c] text-[#1b6740] rounded-[99px]">
-                                <span className="text-[9px] font-normal">
+                                <span className="text-[10px] font-normal">
                                   Intermediate
                                 </span>
                               </Badge>
@@ -132,7 +132,7 @@ export const SkillWalletSection = (): JSX.Element => {
                         </div>
 
                         <div className="flex items-baseline">
-                          <span className="font-bold text-[#1a7b48] text-[24px] leading-[32px] font-['Inter',Helvetica]">
+                          <span className="font-bold text-[#1a7b48] text-[32px] leading-[44.8px] font-['Inter',Helvetica]">
                             92%
                           </span>
                         </div>
@@ -228,26 +228,26 @@ export const SkillWalletSection = (): JSX.Element => {
                   </Card>
 
                   {/* Docker skill card */}
-                  <Card className="w-full h-[60px] mb-2 rounded-[0px_0px_16px_16px] bg-[#1b6740] shadow-[0px_4px_4px_#00000040] overflow-hidden">
+                  <Card className="w-full h-[84px] mb-4 rounded-[0px_0px_16px_16px] bg-[#1b6740] shadow-[0px_4px_4px_#00000040] overflow-hidden">
                     <CardContent className="p-0">
-                      <div className="flex w-[340px] items-center justify-between h-full py-4 mx-auto">
+                      <div className="flex w-[364px] items-center justify-between h-full py-8 mx-auto">
                         <div className="flex items-center gap-2">
                           <img
-                            className="w-6 h-6"
+                            className="w-8 h-8"
                             alt="Docker"
                             src="/figmaAssets/frame-86184.svg"
                           />
                           <div className="flex items-baseline gap-2">
-                            <span className="font-normal text-white text-sm font-['Inter',Helvetica]">
+                            <span className="font-normal text-white text-lg font-['Inter',Helvetica]">
                               Docker
                             </span>
-                            <span className="font-normal text-stone-100 text-[9px] font-['Inter',Helvetica]">
+                            <span className="font-normal text-stone-100 text-[10px] font-['Inter',Helvetica]">
                               Advance
                             </span>
                           </div>
                         </div>
                         <div className="flex items-baseline">
-                          <span className="font-extralight text-stone-300 text-[20px] leading-[28px] font-['Inter',Helvetica]">
+                          <span className="font-extralight text-stone-300 text-[32px] leading-[44.8px] font-['Inter',Helvetica]">
                             87%
                           </span>
                         </div>
@@ -259,18 +259,18 @@ export const SkillWalletSection = (): JSX.Element => {
                   {mongoDbSkills.map((skill) => (
                     <Card
                       key={skill.id}
-                      className="w-full h-[60px] mb-2 rounded-[0px_0px_16px_16px] bg-[#1b6740] shadow-[0px_4px_4px_#00000040] overflow-hidden"
+                      className="w-full h-[84px] mb-4 rounded-[0px_0px_16px_16px] bg-[#1b6740] shadow-[0px_4px_4px_#00000040] overflow-hidden"
                     >
                       <CardContent className="p-0">
-                        <div className="flex w-[340px] items-center justify-between h-full py-4 mx-auto">
+                        <div className="flex w-[364px] items-center justify-between h-full py-8 mx-auto">
                           <div className="flex items-center gap-2">
                             <img
-                              className="w-6 h-6"
+                              className="w-8 h-8"
                               alt="MongoDB"
                               src="/figmaAssets/frame-86184-1.svg"
                             />
                             <div className="flex items-baseline gap-2">
-                              <span className="font-normal text-white text-sm font-['Inter',Helvetica]">
+                              <span className="font-normal text-white text-lg font-['Inter',Helvetica]">
                                 {skill.name}
                               </span>
                               <span className="font-normal text-stone-100 text-[10px] font-['Inter',Helvetica]">
